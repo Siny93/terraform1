@@ -1,5 +1,5 @@
 variable "demo" {
-  default = devops
+  default = "devops"
 }
 
 output "demo" {
