@@ -3,12 +3,10 @@ provider "aws" {
 }
 
 
-resource "aws_s3_bucket" "sample" {
-  bucket = "shiju"
-
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
+terraform {
+  backend "s3" {
+    bucket = "test"
+    key    = "sample/terraform.tfstate"
+    region = "us-east-1"
   }
 }
-
